@@ -1,8 +1,4 @@
 jdk:
   - openjdk8
-before_install:
-  # Gradle 5.0 needs Java 8 even when the build image defaults to Java 17.
-  - sdk install java 8.0.504+1-tem
-  - sdk use java 8.0.504+1-tem
 install:
   - ./gradlew clean check install -x signArchives
