@@ -8,6 +8,8 @@ version '1.0.0'
 sourceCompatibility = versions.javaVersion
 
 repositories {
+    // Avoid Maven Central rate limits on shared CI runners.
+    maven { url 'https://maven-central.storage-download.googleapis.com/maven2/' }
     mavenCentral()
 }
 
